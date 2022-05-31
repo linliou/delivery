@@ -5,36 +5,35 @@
 <head>
 <title>탐색 처리</title>
 <body>
-
 	<br>
 	<h1 align=center>요기따</h1>
 	<div align="right">
-	
-	<% String id = (String) session.getAttribute("id");
-System.out.println("ID=" + id);
 
-	   if (id == null || id.equals(""))  { %>
-		   <button type="button" onclick="location.href='Login.html'">로그인
-	     	</button>
+		<%
+			String id = (String) session.getAttribute("id");
+			System.out.println("ID=" + id);
+
+			if (id == null || id.equals("")) {
+		%>
+		<button type="button" onclick="location.href='Login.html'">로그인
+		</button>
 		<button type="button" onclick="location.href='Joinm.html'">회원가입
 		</button>
-		<% } else { %>
-			 <%=id%>님이 로그인 했습니다. 
-			 <input type=button value="로그아웃" onclick="location.href='Logout.jsp'">
-		<% } %>
-		
+		<%
+			} else {
+		%>
+		<%=id%>님이 로그인 했습니다. <input type=button value="로그아웃"
+			onclick="location.href='Logout.jsp'">
+		<%
+			}
+		%>
+
 	</div>
 	<hr>
 	<br>
-
 	<div align="center">
-		<h3>
-			탐색을 위한 페이지 작성하기 바랍니다.....
-		</h3>
+		<h3>탐색을 위한 페이지 작성하기 바랍니다.....</h3>
 	</div>
-
-
-
 </body>
 </html>
 

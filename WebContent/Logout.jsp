@@ -6,30 +6,27 @@
 <title>로그아웃 처리</title>
 <body>
 	<br>
-<table width=100%>
-<tr>
-<td bgcolor='#CCEEFF'><h1 align=center>요기따</h1>
-<div align="right">
-		<button type="button" onclick="location.href='DeliveryStart.html'">처음으로
-		</button>
-		
-	</div></td>
-</tr>
-</table>
-	
+	<table width=100%>
+		<tr>
+			<td bgcolor='#CCEEFF'><h1 align=center>요기따</h1>
+				<div align="right">
+					<button type="button" onclick="location.href='DeliveryStart.html'">처음으로
+					</button>
+
+				</div>
+			</td>
+		</tr>
+	</table>
 	<hr>
 	<br>
-
 	<div align="center">
 		<h3>
 			<%=session.getAttribute("id")%>님 로그아웃했습니다.
 		</h3>
 	</div>
-
 	<%
 		session.invalidate();
 	%>
-
 </body>
 </html>
 
